@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -47,6 +49,12 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.5'
 
     implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9'
+
+    // Hilt
+    def hilt_version = '2.45'
+    implementation "androidx.hilt:hilt-navigation-fragment:1.1.0"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
