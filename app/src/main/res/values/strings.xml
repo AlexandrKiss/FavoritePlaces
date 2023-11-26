@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Favorite Places</string>
+    <string name="title_map">Map</string>
+    <string name="title_place_list">Place list</string>
+</resources>
